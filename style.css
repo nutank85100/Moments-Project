@@ -12,7 +12,7 @@ body {
 :root {
     --bg-color: #141414;
     --card-bg-color: #1F1F1F;
-    --accent-color: #BCDB54;
+    --accent-color: #afd33a;
     --sec-text-cl: #b9b9b9;
     --btn-bg-color: #333333;
 }
@@ -123,7 +123,24 @@ main {
     .card {
         width: 20%;
     }
+
+    .card-item {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .card-item:hover {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+    }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
 
 
 
